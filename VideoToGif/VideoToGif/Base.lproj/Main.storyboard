@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EcH-cC-ebR">
+                                <rect key="frame" x="112.5" y="329" width="150" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="YNU-Jt-U7z"/>
+                                    <constraint firstAttribute="width" constant="150" id="oeb-sG-eNr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="添加视频"/>
+                                <connections>
+                                    <action selector="addActionVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HGq-R5-TDY"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aMa-6t-m12">
+                                <rect key="frame" x="85" y="100" width="205" height="179"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="179" id="6hW-0M-RpE"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y8r-8L-x29">
+                                <rect key="frame" x="128.5" y="413" width="117" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="保存到相册">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="savePhotoAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hrS-hf-GFP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="EcH-cC-ebR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KUS-RK-tqH"/>
+                            <constraint firstItem="y8r-8L-x29" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SWq-kq-r02"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aMa-6t-m12" secondAttribute="trailing" constant="85" id="YF8-Mj-6PF"/>
+                            <constraint firstItem="EcH-cC-ebR" firstAttribute="top" secondItem="aMa-6t-m12" secondAttribute="bottom" constant="50" id="gZZ-3W-vSA"/>
+                            <constraint firstItem="y8r-8L-x29" firstAttribute="top" secondItem="EcH-cC-ebR" secondAttribute="bottom" constant="34" id="qOf-jz-KM3"/>
+                            <constraint firstItem="aMa-6t-m12" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="85" id="qpU-0J-nVN"/>
+                            <constraint firstItem="aMa-6t-m12" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="tue-b4-0sJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="addVideo" destination="EcH-cC-ebR" id="28D-Rt-J8g"/>
+                        <outlet property="videoPlayerViewGif" destination="aMa-6t-m12" id="H5N-c2-6Dn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="126.38680659670166"/>
+        </scene>
+    </scenes>
+</document>
